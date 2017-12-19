@@ -1,4 +1,11 @@
-# crypto-exchange
+# About
+
+This is a simple app that fetches crypto currencies prices.
+
+Used API from coinmarketcap.com
+
+
+# crypto-exchange-price
 
 > A Vue.js project
 
