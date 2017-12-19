@@ -4,6 +4,8 @@ This is a simple app that fetches crypto currencies prices.
 
 Used API from coinmarketcap.com
 
+Demo running at: https://github.com/andremasson/crypto-exchange-prices
+
 
 # crypto-exchange-price
 
