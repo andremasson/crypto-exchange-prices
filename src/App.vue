@@ -17,34 +17,33 @@
     <v-content>
       <v-container grid-list-md text-xs-center>
 
-        <router-view :currency="this.currency">
+        <router-view>
         </router-view>
 
       </v-container>
     </v-content>
     <v-footer app fixed>
-      <span>André Masson - 2017</span>
+      <span>Last update: {{ new Date().toDateString() }}</span>
     </v-footer>
   </v-app>
 </template>
 
 <script>
+import store from '@/store'
 export default {
   name: 'app',
-  //currency: 'USD',
+  // currency: 'USD',
   methods: {
-    select_currency: function(val) {
-      this.currency = val;
-      this.$router.go();
+    select_currency: function (val) {
+      store.commit('set_currency', val)
     }
   },
   data () {
     return {
-      currency: 'USD',
       dropdown_currency:
-      [ { text: 'USD'},
-        { text: 'EUR'},
-        { text: 'BRL'} ]
+      [ { text: 'USD' },
+        { text: 'EUR' },
+        { text: 'BRL' } ]
     }
   }
 }

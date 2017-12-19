@@ -6,19 +6,20 @@ import router from './router'
 import App from './App'
 import 'vuetify/dist/vuetify.min.css'
 import VueResource from 'vue-resource'
-import VueRouter from 'vue-router'
+import Vuex from 'vuex'
+import store from '@/store'
 
 Vue.config.productionTip = false
 
 Vue.use(Vuetify)
 Vue.use(VueResource)
-Vue.use(VueRouter)
+Vue.use(Vuex)
 
 /* eslint-disable no-new */
-new Vue( {
+export default new Vue({
   el: '#app',
   router,
+  store,
   template: '<App/>',
-  components: { App },
-
+  components: { App }
 })
